@@ -1,0 +1,25 @@
+paths:
+  '/customers/{customer_id}':
+    parameters:
+      - schema:
+          type: integer
+        name: customer_id
+        in: path
+        required: true
+    get:
+      # Original GET details removed for brevity
+    put:
+      summary: customer update
+      operationId: put-customers-customer_id
+      responses:
+        '204':
+          description: No Content
+      description: Update a customer record
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
